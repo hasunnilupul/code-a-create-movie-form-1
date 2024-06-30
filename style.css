@@ -4,15 +4,27 @@
 
 
 .app {
-    @apply max-w-full flex items-center justify-center h-screen mx-auto;
+    @apply flex flex-col w-full p-4;
+}
+
+.header {
+    @apply flex flex-row items-center justify-end w-full mb-5 px-4;
+}
+
+.primary-button {
+    @apply px-2 py-1 rounded bg-blue-400 text-white;
+}
+
+.secondary-button {
+    @apply px-2 py-1 rounded bg-gray-400 text-white;
 }
 
 .movie-list {
-    @apply flex items-center justify-center space-x-4;
+    @apply grid grid-cols-3 grid-flow-row gap-3 w-full;
 }
 
 .movie-item {
-    @apply w-96 h-auto bg-white rounded-md flex flex-col items-center justify-start overflow-hidden shadow-2xl;
+    @apply w-full h-auto bg-white rounded-md flex flex-col items-center justify-start overflow-hidden shadow-2xl;
 }
 
 .movie-item-image-wrapper {
@@ -20,7 +32,7 @@
 }
 
 .movie-item-image {
-    @apply object-cover object-center h-[600px];
+    @apply w-full object-cover object-center h-[600px];
 }
 
 .movie-item-star-wrapper {
@@ -38,6 +50,7 @@
 .movie-item-star-content-rating-rated {
     @apply text-xl text-yellow-800;
 }
+
 .movie-item-star-content-rating-not-rated {
     @apply text-xl text-gray-400;
 }
